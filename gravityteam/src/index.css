@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+ 
+
+.gradient__blue{ 
+  background: linear-gradient(135deg, #665DCD 0%, #5FA4E6 44.76%, #D2AB67 100%);
+} 
+
+@layer components {
+  .link {
+    @apply text-white text-[15px] uppercase tracking-[1px] font-normal 
+  }
+  .heading {
+    @apply text-white-2 md:leading-[66px] leading-[46px] lg:leading-[86px] text-[44px] md:text-[54px] lg:text-[74px] font-medium text-center
+  }
+  .box {
+    @apply 
+      sm:max-w-[264px] 
+      sm:max-h-[180px] 
+      sm:pt-[32.1px] 
+      sm:px-[30px] 
+      sm:pb-[36px] 
+      sm:min-h-[180px] 
+      sm:min-w-[264px] 
+      px-3 py-5
+      min-w-[174px]
+      max-w-[174px]
+      min-h-[200px]
+    grid place-content-center
+  }  
+  .box > h2 {
+    @apply text-white text-center font-medium text-[32px] leading-[57px]
+  }
+  .box > p {
+    @apply max-w-[161.5px] mx-auto  text-center text-white-2 
+  }
+  .bg-img-gradient{
+    background: url('./assets/background-blob-service-1.png.png')  no-repeat;
+    /* width: 2038.893px;
+    height: 2018.932px; */
+    position: absolute;
+    rotate: 60deg;
+    flex-shrink: 0;   
+  }
+  .gradient__black {
+    border-radius: 4px;
+    border: 1px solid rgba(65, 85, 114, 0.50);
+    background: linear-gradient(180deg, rgba(65, 85, 114, 0.15) 0%, rgba(27, 27, 30, 0.10) 100%);
+  }
+  .wallet__container::after, .wallet__container::before{
+    @apply w-full lg:w-[408px] ;
+    height: 152px;
+    flex-shrink: 0;
+    /* background-color: #5FA4E6; */
+    position: absolute;
+    content: "";
+    z-index: 5;
+  }
+  
+  .wallet__container::after{
+    @apply right-0 lg:bottom-0 hidden lg:block;
+    background: linear-gradient(180deg, rgba(20, 22, 25, 0.00) 0%, rgba(20, 22, 25, 0.88) 52.68%, #141619 100%);
+  }
+  
+  .wallet__container::before{
+    @apply left-0 lg:top-0 hidden lg:block;
+    background: linear-gradient(0deg, rgba(20, 22, 25, 0.00) 0%, rgba(20, 22, 25, 0.88) 52.68%, #141619 100%);
+  }
+
+  .paragraph {
+    @apply  not-italic text-white-2 font-normal 
+  }
+}
+
