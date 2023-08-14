@@ -14,6 +14,8 @@ export default {
         "neutral-blue" : "hsl(220, 16%, 96%)",
         "neutral-gray" : "hsl(0, 0%, 98%)",
         "neutral-white" : "hsl(0, 0%, 100%)",
+        "neutral-green" : "hsl(136, 65%, 61%)",
+        "neutral-cyan" : "hsl(192, 70%, 61%)",
       }, 
       fontFamily: {
         "public-sans": ['Public Sans', 'sans-serif']
@@ -23,6 +25,11 @@ export default {
         "laptop": "769px",
         "desktop": "1025px",
         "widescreen": "1201px", 
+      },
+      boxShadow: {
+        
+        '5xl': '0 0 150px 30px rgba(0, 0, 0, 1)',
+        // "5xl": "box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 1)"
       }
     },
   },

@@ -3,3 +3,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer base {
+    h1 {
+        @apply text-4xl laptop:text-6xl
+    }
+    h3 {
+        @apply text-2xl
+    }
+    p {
+        @apply text-neutral-grayish 
+    }
+    a {
+        @apply cursor-pointer
+    }
+}
+
+@layer components {
+    .primaryButton {
+        @apply bg-gradient-to-r from-primary-green text-white to-primary-cyan px-8 rounded-full font-semibold py-3 hover:from-neutral-green hover:to-neutral-cyan;
+    }   
+}
+
+@layer utilities {
+    .padding {
+        @apply px-5 tablet:px-16 laptop:px-20 widescreen:px-28 py-10 laptop:py-14
+    }
+    .col-to-row {
+        @apply flex flex-col laptop:flex-row
+    }
+    .footer-util {
+        @apply laptop:justify-between laptop:gap-x-10 widescreen:gap-x-20 bg-primary-blue gap-y-7  
+    }
+    .footer-links {
+        @apply gap-y-2 items-center laptop:gap-x-10 widescreen:gap-x-20 laptop:items-start
+    }
+    .center-to-left-text {
+        @apply text-center laptop:text-left
+    }
+    .card {
+        @apply hover:shadow-lg laptop:max-w-[300px] laptop:min-w-[300px] tablet:max-w-[300px] tablet:min-w-[300px]
+    }
+    .blog-card-container {
+        @apply laptop:justify-between laptop:overflow-x-scroll
+    }
+    .nav-links {
+        @apply cursor-pointer hover:text-primary-blue relative min-w-[100px];
+    }
+    .nav-links::before {
+        @apply content-[""] hidden hover:block absolute h-[2px] -bottom-[98%] w-full bg-gradient-to-r from-primary-green to-primary-cyan   
+    }
+}
